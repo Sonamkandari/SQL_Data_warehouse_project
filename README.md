@@ -9,7 +9,7 @@
 
   # What we’re going to do in this project are
   **project requirement** Building the data warehouse (data engineering).
- - **Objective** The objective of the project is to develop a modern data warehouse using My SQL to consolidate sales data, enabling analytical reports and informed decision making.
+ - **Objective** The objective of the project is to develop a modern data warehouse using SQL serevr to consolidate sales data, enabling analytical reports and informed decision making.
 ## What are the specifications of the project?
 1. **Data sources** - Import data from the source systems, ERP and CRM provided  as CSV file.
 2. **Data quality** - Cleans and resolves data quality issues prior to analysis.
