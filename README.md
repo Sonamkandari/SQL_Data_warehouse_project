@@ -50,6 +50,7 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 --- 
 
 # Using Draw.io to desining  and draw the Data Architecture 
+---
   <img width="861" height="417" alt="image" src="https://github.com/user-attachments/assets/e68e0217-c235-4c12-8cbe-51770760768e" />
   
 ---
