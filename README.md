@@ -210,8 +210,14 @@ All stored procedures used for loading data must follow the naming pattern:
     <img width="405" height="523" alt="image" src="https://github.com/user-attachments/assets/b0cb92d1-48ac-4e93-bcfc-e3caeab9a614" />
 ---
 - DDl -> Data Defination languages define the  structure of database yables
-- 
+---
+- now we are wrinting SQL  queries so that we can connect source system to our source system
 
+ * We write SQL queries to integrate data from the source system into SQL Server.
+
+If the source data is in an Excel or CSV file (e.g., customer details), we create a table in SQL Server that matches the structure of the file: same columns, correct data types, and a suitable table name.
+
+Once the table is created, we can load/import the data into SQL Server without errors.
 
   
 
