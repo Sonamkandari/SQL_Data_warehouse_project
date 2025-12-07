@@ -184,5 +184,7 @@ All stored procedures used for loading data must follow the naming pattern:
 ---
 ## Project Initialization
 * Create Database & Schemas
-  
+---  
+  <img width="720" height="525" alt="image" src="https://github.com/user-attachments/assets/a0741990-5dbd-434b-ad36-f3f3bc2847f4" />
+---
 
