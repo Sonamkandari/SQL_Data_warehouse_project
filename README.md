@@ -69,5 +69,7 @@
 <img width="1007" height="749" alt="image" src="https://github.com/user-attachments/assets/07f5eb7a-5457-4263-a7c6-701cbef19ceb" />
 
 ---
-- One more resource for icons we had used that is flat icons
-- 
+- One more resource for icons we had used that is flaticons from this we can any specific and new special icon in our drawing board
+---
+
+  
