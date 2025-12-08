@@ -353,7 +353,7 @@ maintenance NVARCHAR(50),
 go
 ```
 # Develop SQL load script
-- and the method used for loading the data from source file to data base is bulk insert
+- and the method used for loading the data from source file to data base is **bulk insert**
 
 ---
 
@@ -363,4 +363,127 @@ go
 
 <img width="1246" height="857" alt="image" src="https://github.com/user-attachments/assets/4be63e87-6278-47f2-88fc-99220510ae14" />
 
+---
+- In the similar way i had connected all the data resources and csv files to this layer and improted all the data
+---
+```
+-- creating stored procedures
+CREATE OR ALTER PROCEDURE bronze.load_bronze as 
+BEGIN 
+    BEGIN  TRY
 
+        PRINT'=========================================';
+        PRINT'Loading Bronze Layer';
+        PRINT'=========================================';
+
+
+
+        PRINT'-----------------------------------------';
+        PRINT'Loading CRM Tables';
+        PRINT'-----------------------------------------';
+
+        PRINT'>> Truncating Table:bronze.crm_cust_info '
+        Truncate table bronze.crm_cust_info;
+        -- Write SQL BULK insert to load all CSV Files
+        PRINT'>>Inserting Data Into:bronze.crm_cust_info '
+        BULK INSERT bronze.crm_cust_info
+        from 'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
+        with (
+         firstrow=2,
+         fieldterminator=',',
+         tablock
+        );
+
+        PRINT'>> Truncating Table:bronze.crm_prd_info '
+        Truncate table bronze.crm_prd_info;
+        PRINT'>>Inserting Data Into:bronze.crm_prd_info '
+        BULK INSERT bronze.crm_prd_info
+        from 'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_crm\prd_info.csv'
+        WITH (
+            FIRSTROW = 2,
+            FIELDTERMINATOR=',',
+            TABLOCK
+        );
+
+
+        PRINT'>> Truncating Table:crm_sales_details '
+        Truncate table bronze.crm_sales_details;
+        PRINT'>>Inserting Data Into:crm_sales_details '
+        bulk insert bronze.crm_sales_details
+        from 'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_crm\sales_details.csv'
+        WITH(
+            FIRSTROW = 2,
+            FIELDTERMINATOR=',',
+            TABLOCK
+        );
+
+
+        PRINT'-----------------------------------------';
+        PRINT'Loading ERP Tables';
+        PRINT'-----------------------------------------';
+
+        -- load the data of erp also
+        PRINT'>> Truncating Table:bronze.erp_cust_az12 '
+        TRUNCATE table bronze.erp_cust_az12;
+        PRINT'>>Inserting Data Into:bronze.erp_cust_az12 '
+        bulk insert bronze.erp_cust_az12
+        from 'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_erp\cust_az12.csv'
+        WITH(
+            FIRSTROW =2,
+            FIELDTERMINATOR=',',
+            TABLOCK
+        );
+
+        PRINT'>> Truncating Table:bronze.erp_loc_a101'
+        TRUNCATE TABLE bronze.erp_loc_a101;
+        PRINT'>>Inserting Data Into:bronze.erp_loc_a101'
+        BULK INSERT bronze.erp_loc_a101
+        from'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_erp\loc_a101.csv'
+        with(
+           FIRSTROW= 2,
+           FIELDTERMINATOR=',',
+           TABLOCK
+        );
+
+        PRINT'>> Truncating Table:bronze.erp_px_cat_g1v2 '
+        TRUNCATE TABLE bronze.erp_px_cat_g1v2;
+        PRINT'>>Inserting Data Into:bronze.erp_px_cat_g1v2 '
+        BULK INSERT bronze.erp_px_cat_g1v2
+        from'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_erp\px_cat_g1v2.csv'
+        with(
+           FIRSTROW= 2,
+           FIELDTERMINATOR=',',
+           TABLOCK
+        );
+
+        /*
+        select * from bronze.erp_cust_az12;
+        select count(*) from bronze.erp_cust_az12;
+        select count(*) from bronze.crm_sales_details;
+        select count(*) from bronze.crm_cust_info;
+        select count(*) from bronze.erp_loc_a101;
+        select count(*) from bronze.erp_px_cat_g1v2;
+
+        */
+    END TRY
+    BEGIN CATCH 
+    END CATCH
+END
+
+
+```
+- Done with loading data from source file to data base
+---
+## 
+<img width="594" height="277" alt="image" src="https://github.com/user-attachments/assets/0a5b4bbc-f8b2-4b26-a4a2-2144e0cfe56e" />
+---
+### NOTE: save frquantly used SQL code in stored procedures in database
+<img width="1136" height="682" alt="image" src="https://github.com/user-attachments/assets/83488c83-c2f4-42a1-adc5-bd9c52f1cc92" />
+
+---
+- Note by using this sql are bale to execute all the csv files directly
+  <img width="711" height="705" alt="image" src="https://github.com/user-attachments/assets/0e2a0e1e-0e87-4ffc-aafb-8af522683057" />
+
+---
+
+<img width="364" height="484" alt="image" src="https://github.com/user-attachments/assets/c84753f5-f490-4a6f-9e39-04dada2367ba" />
