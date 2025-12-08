@@ -482,7 +482,7 @@ END
 
 ---
 - Note by using this sql are bale to execute all the csv files directly
-
+- sql runs the try block and if it fails it runs the CATCH block to handle the Error
 ```
 EXEC.bronze.load_bronze
 -- Add Prints to track execution, debug issues, and understand its flow
@@ -491,3 +491,5 @@ EXEC.bronze.load_bronze
 ---
 
 <img width="364" height="484" alt="image" src="https://github.com/user-attachments/assets/c84753f5-f490-4a6f-9e39-04dada2367ba" />
+
+---
