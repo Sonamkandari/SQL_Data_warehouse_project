@@ -482,8 +482,12 @@ END
 
 ---
 - Note by using this sql are bale to execute all the csv files directly
-  <img width="711" height="705" alt="image" src="https://github.com/user-attachments/assets/0e2a0e1e-0e87-4ffc-aafb-8af522683057" />
 
+```
+EXEC.bronze.load_bronze
+-- Add Prints to track execution, debug issues, and understand its flow
+
+```
 ---
 
 <img width="364" height="484" alt="image" src="https://github.com/user-attachments/assets/c84753f5-f490-4a6f-9e39-04dada2367ba" />
