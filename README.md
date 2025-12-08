@@ -492,3 +492,16 @@ EXEC.bronze.load_bronze
 <img width="364" height="484" alt="image" src="https://github.com/user-attachments/assets/c84753f5-f490-4a6f-9e39-04dada2367ba" />
 
 ---
+## ETL PROCESS
+- Extract , Transmission ,Load Process
+- Note: **Bottle Neck**:A bottleneck is a point in a process where the flow of work slows down because that step cannot handle the workload coming into it.
+- 📌 Simple Definition
+A bottleneck is the slowest or most limiting part of a system that reduces the overall speed or performance of the entire process.
+📌 Why is it called a bottleneck?
+- Think of a water bottle:
+- The bottle is wide → can hold a lot of water
+- But the neck is narrow → only a small amount can flow out at a time
+- Similarly, in any workflow, the narrowest (slowest) part controls how fast the entire process can move.
+- 
+<img width="684" height="71" alt="image" src="https://github.com/user-attachments/assets/97ed3c5b-4273-4903-abf1-0be70d1184f3" />
+---
