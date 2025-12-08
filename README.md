@@ -1,7 +1,7 @@
-# Data_warehouse_project
+# Data_warehouse_project 
 
-Welcome to the Data Warehouse and Analytical Project repository.
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry-based practices in the data engineering and analytics. 
+- **Welcome to the Data Warehouse and Analytical Project repository.
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry-based practices in the data engineering and analytics.** 
 ---
 - the first thing is we needd to create a project plan
 - for creating a project plan we will use Notion
