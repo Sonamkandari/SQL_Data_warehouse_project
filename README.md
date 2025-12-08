@@ -496,8 +496,8 @@ EXEC.bronze.load_bronze
 - Extract , Transmission ,Load Process
 - Note: **Bottle Neck**:A bottleneck is a point in a process where the flow of work slows down because that step cannot handle the workload coming into it.
 - 📌 Simple Definition
-A bottleneck is the slowest or most limiting part of a system that reduces the overall speed or performance of the entire process.
-📌 Why is it called a bottleneck?
+-A bottleneck is the slowest or most limiting part of a system that reduces the overall speed or performance of the entire process.
+- 📌 Why is it called a bottleneck?
 - Think of a water bottle:
 - The bottle is wide → can hold a lot of water
 - But the neck is narrow → only a small amount can flow out at a time
