@@ -545,15 +545,12 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 ---
  <img width="946" height="427" alt="image" src="https://github.com/user-attachments/assets/d77c23ba-11eb-426b-b246-329ef29ca993" />
 ---
-- **Data Lineage:** Data Lineage is the end-to-end visibility of data’s origin, movement, transformations, and destination.
----
+* **Data Lineage:** Data Lineage is the end-to-end visibility of data’s origin, movement, transformations, and destination.
+
 ## Second part of the project to build Silver Layer of the Project
----
 - what we gonna do in it now
 ---
-
 ![Uploading image.png…]()
-
 ---
 - Explore & Understand the data
 - visualizing tables of CRM csv files
