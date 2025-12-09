@@ -563,12 +563,17 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 ## validating: Data Correcctness Checks
 ---
 specification of Bronze layer
-![Uploading image.png…]()
+---
+<img width="784" height="261" alt="image" src="https://github.com/user-attachments/assets/075387cf-f4c8-45a3-a5ba-e27b98c89b53" />
+
 ---
 ## Building data Defination language for bronze layer
 - It is comparatively easy to build DDL  for silver layer comapare broze layer
 - since because we are not making any changes while loading data from bronze layer to silver layer so the DDL will be same in the silver layer also
 ---
 
+<img width="847" height="576" alt="image" src="https://github.com/user-attachments/assets/722d46a9-a18b-4cd5-8f79-6a871734aedc" />
+
+---
 
 
