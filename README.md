@@ -578,3 +578,5 @@ specification of Bronze layer
 - Here i created successfully  6 tables for silver layer also
 <img width="947" height="747" alt="image" src="https://github.com/user-attachments/assets/a2502970-6dd5-4b79-b177-1c7f720d1be2" />
 ---
+## Before loading data from broze layer to silver layer we have to check Quality issues in Bronze layer
+# build and Load CRM_cust_info
