@@ -356,10 +356,6 @@ go
 
 ---
 
-<img width="763" height="472" alt="image" src="https://github.com/user-attachments/assets/a2c06c95-11e6-4ed6-a7bf-00ad9d538f79" />
-
----
-
 <img width="1246" height="857" alt="image" src="https://github.com/user-attachments/assets/4be63e87-6278-47f2-88fc-99220510ae14" />
 
 ---
