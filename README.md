@@ -639,4 +639,8 @@ WHERE flag_last = 1;
 - 2: **Data Normalization & Standardization**: Maps coded values to meaningful, user-friendly descripttion
 - 3: **Handling Missing Data**: Fills in the blanks by adding a default values
 - 4: **Remove Duplicates**: Ensures only record per entity by identifying and retaining the most relevant row
-  
+---
+# clean & Load crm_prd_info
+- Moving into the second table of the bronze layer that is Product_information : prd_info
+- 
+
