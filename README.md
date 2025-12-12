@@ -579,4 +579,9 @@ specification of Bronze layer
 <img width="947" height="747" alt="image" src="https://github.com/user-attachments/assets/a2502970-6dd5-4b79-b177-1c7f720d1be2" />
 ---
 ## Before loading data from broze layer to silver layer we have to check Quality issues in Bronze layer
-# build and Load CRM_cust_info
+- # build and Load CRM_cust_info
+- we will take each table one by one and check the quality issues of each table one by one
+---
+- check for Nulls or Duplicates in Primary Key
+- Expectation: No Reult
+- 
