@@ -759,4 +759,36 @@ from bronze.crm_sales_details
 - 2: **Handling Missing Data**
 ---
 ## Clean & Load erp_cust_az12
+-- In this table we had onle 3 columns and we will clean the data of each column according to the business need
+```
+Insert into silver.erp_cust_az12(
+cid,
+bdate,
+gen
+)
+select
+CASE WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid,4,LEN(cid))
+	ELSE  CID
+END AS cid,
 
+-- Writing transformation for earth date
+CASE WHEN bdate > GETDATE() THEN NULL
+	ELSE bdate
+END as bdate,
+CASE  
+	when UPPER(TRIM(gen))  IN ('F','FEMALE') THEN 'Female'
+	when UPPER(TRIM(gen)) IN ('M','MALE')THEN 'Male'
+ELSE  'n/a'
+END as gen
+from bronze.erp_cust_az12
+
+
+```
+- after corretion done the data quality
+- well cleaned data
+<img width="535" height="483" alt="image" src="https://github.com/user-attachments/assets/a52274eb-6bf3-4913-a53e-1f10a7066cab" />
+---  
+## Different types of Data transformation we had done
+- **Handled Invalid Values**
+- **Done Data Normalization**
+- **Handled the Missing Values**
