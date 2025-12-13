@@ -642,5 +642,55 @@ WHERE flag_last = 1;
 ---
 # clean & Load crm_prd_info
 - Moving into the second table of the bronze layer that is Product_information : prd_info
-- 
+-  cleaned the 2nd table  crm_prd_info table , we had cleaned all the columns of second table and inserted those cleaned table in the silver layer
+ ```
+USE DataWarehouse;
+
+-- NOW INSERTING ALL THE CLEANED COLUMN IN THE SILVER TABLE
+INSERT INTO silver.crm_prd_info (
+    prd_id,
+    prd_key,
+    cat_id,
+    prd_nm,
+    prd_cost,
+    prd_line,
+    prd_start_dt,
+    prd_end_dt,
+    dwh_create_date
+)
+SELECT 
+    prd_id,
+    prd_key,
+    REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id,
+    prd_nm,
+    ISNULL(prd_cost, 0) AS prd_cost,
+    CASE 
+        WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
+        WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
+        WHEN UPPER(TRIM(prd_line)) = 'S' THEN 'Other Sales'
+        WHEN UPPER(TRIM(prd_line)) = 'T' THEN 'Touring'
+        ELSE 'NA'
+    END AS prd_line,
+    CAST(prd_start_dt AS DATE) AS prd_start_dt,
+    CAST(
+        DATEADD(
+            DAY,
+            -1,
+            LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt)
+        ) AS DATE
+    ) AS prd_end_dt,
+    GETDATE() AS dwh_create_date
+FROM bronze.crm_prd_info;
+
+```
+ -  and after inserting all the cleaned data we will re check the ll the columns of crm_prd_info table 
+# here are the different types of data transformation which we had used here are
+- 1:**Derived Columns**: Create new columns based on calculations or tranformations of existing ones.
+- 2:**Data Normalization & Standardization**: Maps coded values to meaningful, user-friendly descripttion
+- 3:**Handling Missing Data**: Fills in the blanks by adding a default values
+- 4:**Data Type Casting**: we are converting data type to one to another datatype
+- 5:**Data Enrichment**: Add new, relevant data to enhance the dataset for analysis
+---
+# Clean & Load ->CRM_sales_details
+
 
