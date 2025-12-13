@@ -692,5 +692,62 @@ FROM bronze.crm_prd_info;
 - 5:**Data Enrichment**: Add new, relevant data to enhance the dataset for analysis
 ---
 # Clean & Load ->CRM_sales_details
+```
+select 
+sls_ord_num,
+sls_prd_key,
+sls_cus_id,
+CASE WHEN sls_order_dt=0 OR LEN(sls_order_dt)!=8 then NULL
+else CAST(CAST(sls_order_dt AS VARCHAR) AS DATE)
+END AS sls_order_dt,
 
+CASE WHEN sls_ship_dt=0 OR LEN(sls_ship_dt)!=8 then NULL
+else CAST(CAST(sls_ship_dt AS VARCHAR) AS DATE)
+END AS sls_ship_dt,
+
+CASE WHEN sls_due_dt=0 OR LEN (sls_due_dt)!=8 then NULL
+else CAST(CAST(sls_due_dt AS VARCHAr )AS DATE)
+END AS sls_due_dt,
+
+CASE WHEN sls_sales IS NULL OR sls_sales <=0 OR sls_sales !=sls_quantity*ABS(sls_price)
+  Then sls_quantity * ABS(sls_price)
+  else sls_sales
+END AS sls_sales,
+
+CASE WHEN sls_price IS NULL OR sls_price<=0
+     THEN sls_sales/NULLIF(sls_quantity,0)
+else sls_price
+END AS sls_price,
+     
+-- sls_sales, -- there is no need to check Invalid Date Orders
+
+sls_quantity,
+sls_price
+
+
+-- sls_ord_num , sls_prd_key and sls_cus_id all are clean columns an dwe dont have  to do analysis and cleaning in these three columns
+-- But now we are moving to sls_order_dt, sls_ship_dt, sls_due_date 
+-- in these columns we have given the date in the integer format we have to convert it into the date format
+-- Order Date must always be earlier than the shipping Date or Due Date
+-- 
+from bronze.crm_sales_details
+
+
+```
+<img width="794" height="419" alt="image" src="https://github.com/user-attachments/assets/6ba44dd7-251a-4aac-918a-d6a96f7765d2" />
+
+---
+- now we had clead safe business data
+- After making correction and cleaning data we will cross check is the data is cleaned or not
+- After that insert data into sales_details table
+
+## Quality check of silver table
+
+---
+### Diffrent types of data columns we had used are
+- 1: **Handling Invalid Data**
+- 2: **Data Type Casting**
+- 2: **Handling Misssing Data**
+---
+## Clean & Load erp_cust_az12
 
