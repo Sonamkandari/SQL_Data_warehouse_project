@@ -823,8 +823,31 @@ FROM bronze.erp_loc_a101;
 ---
 <img width="504" height="204" alt="image" src="https://github.com/user-attachments/assets/e7625fda-4f4c-4898-a31b-a30b2ef8870c" />
 ---
+# cleanig the last table of our source system
+- quality of the last table is already very good but still i have check all the possible transformations
+
+```
+  -- check for the unwanted spaces 
+select * from bronze.erp_px_cat_g1v2
+where cat!=trim(cat) or subcat!=trim(subcat) or maintenance!=trim(maintenance);
+
+-- Data standardization & Consistency
+select 
+distinct cat 
+from bronze.erp_px_cat_g1v2;
 
 
-  
+select distinct 
+subcat 
+from bronze.erp_px_cat_g1v2;
+
+select distinct 
+maintenance from bronze.erp_px_cat_g1v2;
+ ```
+
+----
+# insertion of cleaned data into silver.erp_px_cat_g1v2
+<img width="937" height="463" alt="image" src="https://github.com/user-attachments/assets/aef57447-a802-438a-a9f6-915d00628900" />
+
 
  
