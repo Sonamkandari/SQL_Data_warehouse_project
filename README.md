@@ -64,10 +64,6 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 ---
 * This way, we had made in the data architecture clear that what are the sources of the data.
 - Designed the sources of the High level Architecture
----  
-<img width="187" height="430" alt="image" src="https://github.com/user-attachments/assets/01a88d82-066a-45cb-acd9-f4f880d41b15" />
-
----
 - Next thing we're going to do is design what will be the content of the bronze, silver, and gold layers.
 --- 
 <img width="1007" height="749" alt="image" src="https://github.com/user-attachments/assets/07f5eb7a-5457-4263-a7c6-701cbef19ceb" />
