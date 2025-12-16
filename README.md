@@ -846,9 +846,11 @@ select distinct
 maintenance from bronze.erp_px_cat_g1v2;
  ```
 
-----
 # insertion of cleaned data into silver.erp_px_cat_g1v2
+---
+
 <img width="937" height="463" alt="image" src="https://github.com/user-attachments/assets/aef57447-a802-438a-a9f6-915d00628900" />
+
 ---
 # INSERTED ALL THE DATA FROM BRONZE LAYER TO THE SILVER LAYER AFTER CLEANING IT
 ```
