@@ -1140,4 +1140,22 @@ END
 ## Now Extending data flow (Draw.io)
 <img width="669" height="494" alt="image" src="https://github.com/user-attachments/assets/7c58c624-b311-4c57-8d4f-8753388fe1a8" />
 
+---
+## Now we gonna build gold_layer
+---
+<img width="951" height="265" alt="image" src="https://github.com/user-attachments/assets/e6c10725-c9ef-4d4d-bfae-ea61e34c799f" />
 
+---
+- ## what is Data Modeling
+- Data modeling is the  process of taking the raw data and then organise it and structure it in a meaningful way.
+  <img width="1118" height="620" alt="image" src="https://github.com/user-attachments/assets/5b002c1f-9245-4a7e-8e69-c4725d7f1a0a" />
+---
+- In Data Modeling we have three different ways on how to draw the different data model
+- **Conceptual Data Model:** conceptual data model does not focus on the details, it just gives the big picture.
+- **Logical Data Models:** here we specify that what are the different columns and what are the different entities these columns have.
+- **Physical Data Models:**This is where everything gets ready before creating it in the database
+ --- 
+  
+<img width="674" height="388" alt="image" src="https://github.com/user-attachments/assets/7b4a3103-a5c8-4a5d-8535-761a4a2d64c7" />
+
+---
