@@ -1179,4 +1179,25 @@ END
  
 ---
 - in this case we are using data of silver layer as we know that we already had every thing is prepeared and cleaned up all the data of silver layer
+---
+---
+- Some objects are remainnig
+--- 
+## Created Data Model
+<img width="1148" height="505" alt="image" src="https://github.com/user-attachments/assets/d7c8404b-ba48-4940-82c3-e4b818925001" />
+---
+## Creating Data Catalog
+- In data catalog we describe each query what it does and how it does
+---
+
+ A data catalog is a centralized inventory of an organization’s data assets that makes it easy to find, understand, trust, and use data. It provides shared metadata, lineage, and data quality information to support governance, security, and compliance. By breaking down data silos, it enables self-service analytics, improves productivity, and serves as a single source of truth for faster, better decision-making.
+ 
+---
+# Now Creating Final Data Flow Diagram
+---
+
+<img width="1186" height="529" alt="image" src="https://github.com/user-attachments/assets/077d586a-0f81-44b7-aead-ecc0238f9564" />
+
+---
+
 
